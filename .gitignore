@@ -1,0 +1,22 @@
+# Herramientas de desarrollo (no necesarias en producción)
+.claude/
+tools/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Logs y temporales
+*.log
+npm-debug.log*
+
+# Dependencias (este proyecto no usa build, pero por si acaso)
+node_modules/
+
+# Originales de trabajo (no forman parte del sitio)
+assets/photos/

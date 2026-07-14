@@ -297,9 +297,16 @@
       return consent;
     };
     function applyConsent(c) {
-      // Hook: load analytics/marketing scripts only if granted.
-      // (No third-party trackers are loaded on this site yet.)
       window.__consent = c;
+      // Google Analytics 4 (Consent Mode): activar la medición solo si se acepta.
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          'analytics_storage': c.analytics ? 'granted' : 'denied',
+          'ad_storage': c.marketing ? 'granted' : 'denied',
+          'ad_user_data': c.marketing ? 'granted' : 'denied',
+          'ad_personalization': c.marketing ? 'granted' : 'denied'
+        });
+      }
     }
     var showBanner = function () { if (banner) banner.classList.add("is-visible"); };
     var hideBanner = function () { if (banner) banner.classList.remove("is-visible"); };

@@ -218,7 +218,8 @@
         if (en.isIntersecting) tryPlay(en.target);
         else { try { en.target.pause(); } catch (e) {} }
       });
-    }, { threshold: 0.15 });
+      // Arranca antes de entrar en pantalla: al verlo, ya está animando (sin hueco).
+    }, { threshold: 0, rootMargin: "400px 0px" });
     vids.forEach(function (v) { io.observe(v); });
   }
 

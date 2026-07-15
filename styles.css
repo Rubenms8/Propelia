@@ -801,7 +801,7 @@ em { font-style: normal; color: var(--accent-bright); }
   background: linear-gradient(90deg, transparent, var(--line-2), transparent);
 }
 .divider-video {
-  width: 124px; height: 124px; object-fit: contain; flex-shrink: 0;
+  width: 148px; height: 148px; object-fit: contain; flex-shrink: 0;
   filter: drop-shadow(0 8px 26px rgba(59,130,246,0.55));
 }
 

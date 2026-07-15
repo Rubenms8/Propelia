@@ -1062,6 +1062,19 @@ em { font-style: normal; color: var(--accent-bright); }
 .pv-prop-price { display: block; font-style: normal; font-family: var(--display); font-weight: 600; font-size: 2.9cqw; color: var(--pfg); letter-spacing: -0.01em; }
 .pv-prop-spec  { display: block; text-decoration: none; font-family: var(--sans); font-size: 2.1cqw; color: var(--pmut); }
 
+/* Portada con captura real (para proyectos nuevos: ver plantilla en index.html) */
+.caso-shot {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: top center;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 30px 60px -26px rgba(0,0,0,0.85);
+  transform: translateY(10px);
+  transition: transform 0.7s var(--ease-out);
+}
+@media (hover: hover) {
+  .caso-card:hover .caso-shot { transform: translateY(0) scale(1.02); }
+}
+
 .casos-note {
   text-align: center; margin-top: clamp(2rem, 4vw, 3rem); font-size: 0.85rem;
   color: var(--mute-2); font-family: var(--mono); letter-spacing: 0.03em;
